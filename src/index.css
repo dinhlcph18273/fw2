@@ -11,6 +11,8 @@ ul {
 .board-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .status {
@@ -58,4 +60,14 @@ ul {
   padding: 1px 2px;
   color: linear-gradient(to right, #30CFD0 0%, #330867 100%)linear-gradient(to right, #30CFD0 0%, #330867 100%);
   font-size: 18px;
+}
+
+.is-x{
+  background: rgb(107, 228, 242) !important;
+  color: #ff6651 !important;
+}
+
+.is-o{
+  background: rgb(254, 87, 87) !important;
+  color: #2cccff !important;
 }

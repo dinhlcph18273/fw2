@@ -19,6 +19,10 @@ function App() {
 
   const winner = checkWinner(squares);
 
+  const resset = () => {
+    setSquares(Array(9).fill(null))
+    setXIsNext(true)
+  }
   let status;
   let again;
   if (winner) {
@@ -32,7 +36,8 @@ function App() {
   }
 
   return (
-    <div className="game">
+  <div>
+      <div className="game">
       <div className="game-board">
         <Board squares={squares} onClick={(i) => handleClick(i)} />
       </div>
@@ -40,13 +45,16 @@ function App() {
         <div>{status}</div>
         <Link
           className="to"
-          onClick={() => setSquares(Array(9).fill(null))}
+          onClick={resset}
           to="/"
         >
           {again}
         </Link>
       </div>
     </div>
+    <button onClick={resset}>Resset game</button>
+
+  </div>
   );
 }
 
