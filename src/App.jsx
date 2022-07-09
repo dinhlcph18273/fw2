@@ -22,15 +22,14 @@ function App() {
   const resset = () => {
     setSquares(Array(9).fill(null))
     setXIsNext(true)
+    setStepNumber(0)
   }
   let status;
-  let again;
   if (winner) {
     status = "Winner: " + winner;
-    again = "Play Again";
   } else if (stepNumber === 9) {
     status = "No one win";
-    again = "Play Again";
+    console.log(stepNumber);
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
@@ -43,16 +42,12 @@ function App() {
       </div>
       <div className="game-info">
         <div>{status}</div>
-        <Link
-          className="to"
-          onClick={resset}
-          to="/"
-        >
-          {again}
-        </Link>
+       
       </div>
     </div>
-    <button onClick={resset}>Resset game</button>
+  <div className="btn">
+    <button onClick={resset} className="btn-rs">Reset game</button>
+  </div>
 
   </div>
   );

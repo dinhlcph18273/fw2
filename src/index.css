@@ -71,3 +71,16 @@ ul {
   background: rgb(254, 87, 87) !important;
   color: #2cccff !important;
 }
+.btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.btn-rs{
+  padding: 10px 50px;
+  border: none;
+  background: rgb(32, 245, 92);
+  box-shadow: 5px 5px 5px #666;
+  border-radius: 5px;
+  color: white;
+}
